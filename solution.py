@@ -176,8 +176,8 @@ def get_route(dest_hostname):
                     #Fill in start
                     #print("hostname: ", gethostbyaddr(sourceIP))
                     if types == 0:
-                        print("destAddr: ", destAddr)
-                        print("sourceIP: ", sourceIP)
+                        #print("destAddr: ", destAddr)
+                        #print("sourceIP: ", sourceIP)
                         hostname = gethostbyaddr(destAddr)[0]
                     else:
                         hostname = gethostbyaddr(sourceIP)[0]
@@ -232,6 +232,7 @@ def get_route(dest_hostname):
                 mySocket.close()
             
 
+    print(tracelist2)
     return tracelist2
 
 # if __name__ == '__main__':
