@@ -175,7 +175,12 @@ def get_route(dest_hostname):
                 try: #try to fetch the hostname
                     #Fill in start
                     #print("hostname: ", gethostbyaddr(sourceIP))
-                    hostname = gethostbyaddr(sourceIP)[0]
+                    if types == 0:
+                        print("destAddr: ", destAddr)
+                        print("sourceIP: ", sourceIP)
+                        hostname = gethostbyaddr(destAddr)[0]
+                    else:
+                        hostname = gethostbyaddr(sourceIP)[0]
                     #print("host: ", hostname)                    
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
@@ -210,7 +215,6 @@ def get_route(dest_hostname):
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
                     #You should add your responses to your lists here and return your list if your destination IP is met
-                    hostname = gethostbyaddr(destAddr)[0]
                     tracelist1 = [str(ttl), ms, sourceIP, hostname]
                     tracelist2.append(tracelist1)
                     #print(tracelist1)
