@@ -218,6 +218,7 @@ def get_route(dest_hostname):
                     tracelist1 = [str(ttl), ms, sourceIP, hostname]
                     tracelist2.append(tracelist1)
                     #print(tracelist1)
+                    print(tracelist2)
                     return tracelist2
                     #Fill in end
                 else:
@@ -232,7 +233,6 @@ def get_route(dest_hostname):
                 mySocket.close()
             
 
-    print(tracelist2)
     return tracelist2
 
 # if __name__ == '__main__':
