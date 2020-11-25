@@ -228,14 +228,14 @@ def get_route(dest_hostname):
 
     return tracelist2
 
-if __name__ == '__main__':
-    returned_list = get_route("www.google.com")
+# if __name__ == '__main__':
+#     returned_list = get_route("www.google.com")
 
-    for item_list in returned_list:
-        item = item_list[0]
-        print(item[0], "\t", item[1], "\t", item[2], end="")
-        if len(item) > 3:
-            print("\t", item[3])
-        else:
-            print()
+#     for item_list in returned_list:
+#         item = item_list[0]
+#         print(item[0], "\t", item[1], "\t", item[2], end="")
+#         if len(item) > 3:
+#             print("\t", item[3])
+#         else:
+#             print()
         
